@@ -1,0 +1,147 @@
+// 覆盖 ElementPlus 样式
+
+html {
+  .el-form-item:last-of-type {
+  }
+
+  .el-button {
+    & + &.block {
+      @apply w-full;
+    }
+  }
+
+  .el-link {
+    @apply font-normal;
+  }
+
+  .el-dialog {
+    --el-dialog-border-radius: 4px;
+  }
+  .el-dialog__body {
+    padding-bottom: 0;
+  }
+  .el-overlay-message-box {
+    @apply z-10;
+  }
+
+  .el-drawer__ {
+    &header {
+      border-bottom: 1px solid var(--el-border-color-lighter);
+      @apply z-10 mb-0 my-shadow-3 pb-[var(--el-drawer-padding-primary)];
+      h4 {
+        @apply mb-0;
+      }
+    }
+
+    &body {
+    }
+
+    &footer {
+      border-top: 1px solid var(--el-border-color-lighter);
+      @apply p-4 z-10 my-shadow-3;
+
+      .el-button {
+        --el-button-size: 36px;
+      }
+    }
+  }
+
+  .el-message {
+    &.app-message {
+      --el-message-padding: .55rem 1rem;
+      border-radius: 20px;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, .05);
+
+      .el-message__icon {
+        @apply hidden;
+      }
+    }
+
+    .el-message__content {
+      @apply leading-tight;
+
+      ul {
+        @apply m-0 pl-5;
+      }
+    }
+  }
+
+  .el-table {
+    //--el-table-header-bg-color: #f5f5f5;
+    // 列表页记录操作链接
+    .list-item-ops {
+      .el-link {
+        @apply inline-block px-1.5 py-0 relative;
+        & + .el-link:before {
+          @apply absolute content-['|'] left-0 top-0 bottom-0 -ml-[1px] text-neutral-400 text-xs leading-[23px];
+        }
+      }
+    }
+
+    .cell {
+      //padding: 2px 10px;
+    }
+
+    .cell-px-0 .cell, .list-item-ops .cell {
+      @apply px-0;
+    }
+
+    .el-table__expanded-cell {
+      @apply p-0;
+    }
+  }
+
+
+  .el-slider--with-input {
+    .el-slider__runway {
+      @apply ml-4;
+    }
+
+    .el-input-number {
+      @apply w-[45px];
+      .el-input__wrapper {
+        @apply p-0;
+      }
+
+      > span {
+        @apply hidden;
+      }
+    }
+  }
+
+  .el-descriptions {
+    &[label-align="right"] {
+      .el-descriptions__label {
+        @apply text-right;
+      }
+    }
+
+    &[label-size="small"] {
+      .el-descriptions__label {
+        @apply w-[120px];
+      }
+    }
+
+    .el-descriptions__label {
+      @apply align-top;
+    }
+  }
+
+  .el-form {
+    &.hide-validate-error {
+      .el-form-item.is-error {
+        .el-input__wrapper {
+          box-shadow: 0 0 0 1px var(--el-input-border-color, var(--el-border-color)) inset;
+        }
+
+        .el-form-item__error {
+          @apply hidden;
+        }
+      }
+    }
+  }
+  .el-upload, .el-upload-list {
+    --el-upload-picture-card-size: 100px;
+    --el-upload-list-picture-card-size: 100px;
+  }
+}

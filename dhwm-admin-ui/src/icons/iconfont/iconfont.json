@@ -1,0 +1,156 @@
+{
+  "id": "3855930",
+  "name": "BendiGo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "本地易购",
+  "glyphs": [
+    {
+      "icon_id": "35964133",
+      "name": "Shop",
+      "font_class": "shop-fill",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "34900433",
+      "name": "store 01",
+      "font_class": "shop",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "245595",
+      "name": "购物",
+      "font_class": "favicon",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "36576657",
+      "name": "点单",
+      "font_class": "diandan",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7549155",
+      "name": "24gf-newspaper",
+      "font_class": "news-fill",
+      "unicode": "e8b3",
+      "unicode_decimal": 59571
+    },
+    {
+      "icon_id": "28213217",
+      "name": "news",
+      "font_class": "news",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "11262363",
+      "name": "到店点餐",
+      "font_class": "booking",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "10506930",
+      "name": "password",
+      "font_class": "password",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "577365",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e752",
+      "unicode_decimal": 59218
+    },
+    {
+      "icon_id": "36020",
+      "name": "goods",
+      "font_class": "goods",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    },
+    {
+      "icon_id": "289085",
+      "name": "goods_fill",
+      "font_class": "goods-fill",
+      "unicode": "e778",
+      "unicode_decimal": 59256
+    },
+    {
+      "icon_id": "577335",
+      "name": "订单",
+      "font_class": "order",
+      "unicode": "e737",
+      "unicode_decimal": 59191
+    },
+    {
+      "icon_id": "579740",
+      "name": "用户-fill",
+      "font_class": "user-fill",
+      "unicode": "e787",
+      "unicode_decimal": 59271
+    },
+    {
+      "icon_id": "579741",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e788",
+      "unicode_decimal": 59272
+    },
+    {
+      "icon_id": "748267",
+      "name": "form_fill",
+      "font_class": "order-fill",
+      "unicode": "e7ab",
+      "unicode_decimal": 59307
+    },
+    {
+      "icon_id": "7009005",
+      "name": "setup_fill",
+      "font_class": "setting-fill",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "7009006",
+      "name": "setup",
+      "font_class": "setting",
+      "unicode": "e729",
+      "unicode_decimal": 59177
+    },
+    {
+      "icon_id": "13683385",
+      "name": "概况",
+      "font_class": "dashboard-fill",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "13921251",
+      "name": "数据",
+      "font_class": "stats",
+      "unicode": "e754",
+      "unicode_decimal": 59220
+    },
+    {
+      "icon_id": "14512718",
+      "name": "数据 (4)",
+      "font_class": "stats-fill",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "20221375",
+      "name": "概况",
+      "font_class": "dashboard",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}

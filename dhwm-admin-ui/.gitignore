@@ -1,0 +1,16 @@
+/.fleet
+/.history
+/.idea
+/.vscode
+/node_modules
+/public/hot
+Thumbs.db
+.DS_Store
+.env.backup
+auth.json
+npm-debug.log
+yarn-error.log
+components.d.ts
+composer.lock
+pnpm-lock.yaml
+stats.html

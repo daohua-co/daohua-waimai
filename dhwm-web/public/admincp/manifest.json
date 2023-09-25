@@ -1,0 +1,80 @@
+{
+  "_admin-f140ca15.js": {
+    "assets": [
+      "assets/logo-ea9a3a15.svg",
+      "assets/iconfont-fa98b55e.woff",
+      "assets/iconfont-58a21b55.ttf"
+    ],
+    "css": [
+      "assets/admin-10564319.css"
+    ],
+    "file": "assets/admin-f140ca15.js",
+    "imports": [
+      "_vendor-8025917f.js",
+      "_vendor.ep-ac3077ed.js",
+      "_lib-9fc8d086.js",
+      "_vendor.mce1-b07e8ce6.js",
+      "_vendor.mce2-3b45e8ff.js"
+    ]
+  },
+  "_lib-9fc8d086.js": {
+    "file": "assets/lib-9fc8d086.js",
+    "imports": [
+      "_vendor-8025917f.js",
+      "_vendor.ep-ac3077ed.js"
+    ]
+  },
+  "_seller-58416458.js": {
+    "file": "assets/seller-58416458.js",
+    "imports": [
+      "_admin-f140ca15.js"
+    ]
+  },
+  "_vendor-8025917f.js": {
+    "file": "assets/vendor-8025917f.js"
+  },
+  "_vendor.ep-ac3077ed.js": {
+    "file": "assets/vendor.ep-ac3077ed.js",
+    "imports": [
+      "_vendor-8025917f.js"
+    ]
+  },
+  "_vendor.mce1-b07e8ce6.js": {
+    "file": "assets/vendor.mce1-b07e8ce6.js",
+    "imports": [
+      "_vendor-8025917f.js"
+    ]
+  },
+  "_vendor.mce2-3b45e8ff.js": {
+    "file": "assets/vendor.mce2-3b45e8ff.js"
+  },
+  "admin.css": {
+    "file": "assets/admin-10564319.css",
+    "src": "admin.css"
+  },
+  "index.html": {
+    "file": "assets/index-d6009bf2.js",
+    "imports": [
+      "_admin-f140ca15.js",
+      "_vendor-8025917f.js",
+      "_vendor.ep-ac3077ed.js",
+      "_lib-9fc8d086.js",
+      "_vendor.mce1-b07e8ce6.js",
+      "_vendor.mce2-3b45e8ff.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/assets/logo.svg": {
+    "file": "assets/logo-ea9a3a15.svg",
+    "src": "src/assets/logo.svg"
+  },
+  "src/icons/iconfont/iconfont.ttf": {
+    "file": "assets/iconfont-58a21b55.ttf",
+    "src": "src/icons/iconfont/iconfont.ttf"
+  },
+  "src/icons/iconfont/iconfont.woff": {
+    "file": "assets/iconfont-fa98b55e.woff",
+    "src": "src/icons/iconfont/iconfont.woff"
+  }
+}

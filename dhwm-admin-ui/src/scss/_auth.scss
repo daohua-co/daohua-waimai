@@ -1,0 +1,41 @@
+.auth-wrapper {
+  @apply fixed inset-0 py-20 px-5 bg-neutral-50 z-[2000];
+
+  .top {
+    @apply text-center;
+    img {
+      @apply inline-block;
+    }
+
+    h1 {
+      @apply text-xl leading-none text-gray-500 font-normal mt-8 mb-5;
+    }
+  }
+
+  .auth-form {
+    @apply w-full max-w-[360px] mx-auto bg-white p-7 rounded-lg;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .05);
+
+    .el-input-group__prepend {
+      @apply p-2.5;
+    }
+
+    .el-form-item {
+      &:last-of-type {
+        @apply mb-0;
+      }
+
+      &__error {
+        @apply left-10;
+      }
+    }
+
+    .submit {
+      @apply w-full text-lg;
+    }
+
+    .iconfont {
+      @apply text-xl leading-5 text-neutral-400;
+    }
+  }
+}

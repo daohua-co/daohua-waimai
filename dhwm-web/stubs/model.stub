@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * @property int $id
+ */
+class {{ class }} extends Model
+{
+    protected $fillable = [
+    ];
+
+    protected $casts = [
+    ];
+
+    protected $attributes = [
+    ];
+}

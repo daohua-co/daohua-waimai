@@ -1,0 +1,140 @@
+@layer components {
+  .layout-border {
+    border-style: solid;
+    border-color: #ddd;
+  }
+}
+
+html {
+  --header-height: 50px;
+
+  &, body, #app, .app-side, .main-wrapper {
+    @apply h-full;
+  }
+
+  .app-side {
+    --menu-1-width: 64px;
+    --border-1: 1px solid #DCDFE6;
+
+    @apply overflow-visible relative text-sm bg-[#333] w-[200px];
+    h1 {
+      border-bottom: 1px solid #444;
+      @apply m-0 p-0 h-[var(--header-height)] w-[var(--menu-1-width)]
+      flex-col box-border flex items-center content-center justify-center;
+      .logo {
+        @apply block bg-[#0088ff] h-[36px] rounded-xl;
+      }
+    }
+
+    // 边栏1级菜单
+    .menu {
+      @apply m-0 p-0 list-none;
+      a {
+        @apply relative no-underline block whitespace-nowrap break-words
+        overflow-hidden text-ellipsis;
+      }
+
+      li {
+        & > a {
+          @apply block text-center py-3 px-0 text-xs leading-normal
+          text-neutral-200 w-[var(--menu-1-width)];
+          i {
+            @apply block text-[20px] leading-tight;
+          }
+        }
+
+        &:hover {
+          > a {
+            @apply text-primary bg-white z-[100];
+          }
+
+          .menu-2 {
+            @apply block z-[11] shadow-lg;
+          }
+        }
+
+        &.active {
+          & > a {
+            @apply relative;
+            &:before, &:after {
+              @apply absolute inset-0 content-[''] border-t layout-border;
+            }
+
+            &:after {
+              @apply top-auto bottom-0;
+            }
+
+            &, &:hover {
+              @apply bg-white text-primary;
+            }
+          }
+
+          .menu-2 {
+            @apply bg-white block;
+          }
+        }
+      }
+    }
+
+    // 边栏2级菜单
+    .menu-2-holder, .menu-2 {
+      @apply bg-white h-full absolute right-0 top-0 z-[8] left-[var(--menu-1-width)]
+      border-r layout-border;
+    }
+
+    .menu-2 {
+      @apply hidden m-0 p-0 list-none z-10 text-neutral-800;
+      dt {
+        @apply m-0 mb-3 p-0 pl-6 text-sm border-b layout-border
+        h-[var(--header-height)] leading-[var(--header-height)];
+      }
+
+      dd {
+        @apply m-0 py-0 px-3 leading-8;
+        a {
+          @apply p-0 pl-3 my-0.5 text-neutral-800;
+        }
+
+        &.active a, &:hover a {
+          @apply bg-gray-100 rounded text-primary;
+        }
+      }
+    }
+  }
+
+  // 页头
+  .app-header {
+    @apply bg-white h-[var(--header-height)] border-b layout-border;
+    .breadcrumb {
+      @apply leading-[var(--header-height)];
+    }
+  }
+
+  // 页面底部版权
+  .copyright {
+    @apply pt-4 leading-none text-center text-gray-400 text-sm;
+    a {
+      @apply no-underline text-primary;
+    }
+  }
+
+  // 顶部右上操作链接
+  .app-top-ops {
+    @apply absolute top-0 right-3 z-[2];
+    .user-action {
+      @apply leading-[var(--header-height)] text-neutral-600;
+    }
+
+    .avatar {
+      @apply leading-7 align-middle overflow-hidden text-center text-white
+      inline-block rounded-full w-7 h-7 bg-neutral-300;
+      .img {
+        @apply block w-full h-full;
+      }
+    }
+
+    .icon-arrow-down {
+      @apply align-middle ml-0.5 text-neutral-600;
+    }
+  }
+}

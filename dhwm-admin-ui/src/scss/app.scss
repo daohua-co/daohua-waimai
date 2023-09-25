@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+@tailwind components;
+@tailwind utilities;
+
+// 不在 js 中 import 框架样式，css 的事让 css 来做。
+// @tailwind base; 的 reset button 样式与 element-plus 样式有冲突，
+// 应在 element-plus 样式之前引入，但编译后其样式总会在 element-plus 样式之后。
+// 解决：在引入 element-plus 样式之前，引入其样式来代替指令。
+@import "tailwindcss/lib/css/preflight.css"; // `@tailwind base` 的样式
+@import 'element-plus/dist/index.css';
+@import '../icons/iconfont/iconfont.css';
+@import "el-override";
+@import "layout";
+@import "auth";
+
+@layer utilities {
+  .text-primary {
+    color: var(--el-color-primary);
+  }
+
+  .my-shadow-3 {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .03);
+  }
+}
+
+// 样式写在 html 之下，利用其优先级保证能覆盖第三方框架样式
+html {
+  &, body {
+    @apply bg-neutral-50 text-[16px];
+  }
+
+  .iconfont {
+    @apply leading-none;
+  }
+
+  .app-main {
+    --el-main-padding: 1rem;
+    position: relative;
+  }
+
+  [v-cloak] {
+    display: none;
+  }
+
+  // 内容盒子
+  .box {
+    @apply relative bg-white rounded overflow-hidden my-shadow-3;
+  }
+  .no-data {
+    @apply text-center p-4 text-gray-400 bg-[#fafafa];
+  }
+
+  .el-form {
+    $form-border: 1px solid #eee;
+
+    &.box {
+      @apply pt-6 px-4 pb-0;
+    }
+
+    .form-title {
+      border-bottom: $form-border;
+      @apply relative text-lg font-normal leading-none mt-12 mb-6 pl-3 pb-3.5 text-neutral-600;
+
+      &:first-of-type {
+        @apply mt-0;
+      }
+
+      &:before {
+        @apply content-[''] absolute h-[1.05rem] left-0 top-0 w-1 bg-[var(--el-color-primary)];
+      }
+    }
+
+    .form-footer-fixed {
+      border-top: $form-border;
+      @apply fixed left-[200px] right-0 bottom-0 bg-white p-4 flex justify-center z-10;
+    }
+  }
+
+  // 提示信息
+  .tips {
+    @apply font-normal text-neutral-400 leading-tight;
+  }
+
+  span.tips {
+    @apply pl-2.5;
+  }
+
+  // toast 提示
+  .app-toast {
+    @apply max-w-[80px] p-2.5 text-center rounded-md bg-black bg-opacity-70;
+    .el-message__content {
+      @apply text-white;
+    }
+
+    .el-icon {
+      @apply hidden;
+    }
+  }
+
+  .permissions-box {
+    .permission-tree {
+      border: 1px solid var(--el-border-color-light);
+      @apply h-80 overflow-y-auto px-0 py-2 rounded;
+    }
+  }
+
+  // 操作栏
+  .op-bar {
+    .filters {
+      .keyword {
+        @apply w-[200px];
+      }
+
+      .el-link--primary:after {
+        content: '';
+        @apply absolute inset-0;
+      }
+    }
+
+    .el-button + .el-button {
+      @apply ml-1;
+    }
+  }
+
+  .text {
+    &-danger {
+      color: var(--el-color-danger);
+    }
+
+    &-success {
+      color: var(--el-color-success);
+    }
+  }
+
+  .show-wp {
+    .el-checkbox__inner {
+      @apply border-white;
+    }
+  }
+
+  .w-e-full-screen-container {
+    @apply z-[999];
+  }
+
+  .w-e-text-placeholder {
+    @apply leading-[21px];
+  }
+
+  .upload-album {
+    .el-upload, .el-upload-list--picture-card {
+      --el-upload-list-picture-card-size: 100px;
+      --el-upload-picture-card-size: 100px;
+
+      .el-progress {
+        @apply w-[90px] z-[2];
+        .el-progress__text {
+          font-size: 1rem !important;
+          text-shadow: 0 0 .5rem #333;
+          @apply font-bold text-white text-[1rem];
+        }
+      }
+
+      .el-image {
+        @apply h-full w-full;
+      }
+
+      .el-upload-list__item-actions {
+        @apply absolute left-auto right-0 top-0 w-8 h-9 rounded;
+      }
+
+      .el-image:hover + .el-upload-list__item-actions {
+        @apply opacity-50;
+
+        span {
+          @apply block rounded;
+        }
+      }
+    }
+  }
+
+  .detail-preview {
+    img {
+      @apply max-w-full;
+    }
+  }
+
+  .w-e-bar-divider {
+    @apply hidden;
+  }
+
+  .editor-wp .el-form-item__content {
+    @apply block;
+  }
+
+  .text-input input[readonly] {
+    @apply text-neutral-400;
+  }
+
+  // tinymce
+  .tox {
+    &.tox-tinymce {
+      border: 1px solid var(--el-border-color) !important;
+      @apply rounded;
+    }
+
+    .tox-editor-header {
+      padding: 2px 0 !important;
+    }
+
+    .tox-tbtn--select {
+      @apply max-w-[100px];
+    }
+  }
+
+  .side-filter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: -1px;
+    overflow-y: auto;
+    background: #fff;
+    border-right: 1px solid #e8e8e8;
+
+    .el-collapse-item__header {
+      padding-left: 1rem;
+      --el-collapse-header-height: 40px;
+    }
+
+    .el-collapse-item__content {
+      padding: 0 0 .5rem;
+
+      a {
+        padding-left: 1rem;
+        display: block;
+        line-height: 2.5rem;
+
+        &:hover:after {
+          border-bottom: none;
+        }
+      }
+
+      a.active, .active > .el-tree-node__content {
+        background: #f2f3f5;
+        color: var(--el-color-primary);
+      }
+
+      .el-tree-node__content {
+        height: 32px;
+      }
+    }
+  }
+}

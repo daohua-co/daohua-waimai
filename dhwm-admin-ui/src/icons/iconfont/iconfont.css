@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3855930 */
+  src: url('iconfont.woff2?t=1692696840458') format('woff2'),
+       url('iconfont.woff?t=1692696840458') format('woff'),
+       url('iconfont.ttf?t=1692696840458') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shop-fill:before {
+  content: "\e601";
+}
+
+.icon-shop:before {
+  content: "\e62b";
+}
+
+.icon-favicon:before {
+  content: "\e66e";
+}
+
+.icon-diandan:before {
+  content: "\e600";
+}
+
+.icon-news-fill:before {
+  content: "\e8b3";
+}
+
+.icon-news:before {
+  content: "\e605";
+}
+
+.icon-booking:before {
+  content: "\e608";
+}
+
+.icon-password:before {
+  content: "\e612";
+}
+
+.icon-search:before {
+  content: "\e752";
+}
+
+.icon-goods:before {
+  content: "\e6cd";
+}
+
+.icon-goods-fill:before {
+  content: "\e778";
+}
+
+.icon-order:before {
+  content: "\e737";
+}
+
+.icon-user-fill:before {
+  content: "\e787";
+}
+
+.icon-user:before {
+  content: "\e788";
+}
+
+.icon-order-fill:before {
+  content: "\e7ab";
+}
+
+.icon-setting-fill:before {
+  content: "\e728";
+}
+
+.icon-setting:before {
+  content: "\e729";
+}
+
+.icon-dashboard-fill:before {
+  content: "\e607";
+}
+
+.icon-stats:before {
+  content: "\e754";
+}
+
+.icon-stats-fill:before {
+  content: "\e66d";
+}
+
+.icon-dashboard:before {
+  content: "\e632";
+}
+
